@@ -30,7 +30,7 @@ GET https://api.github.com/repos/n138-kz/oshiire-bot-v2
 
 ## Refs
 
-- [![](https://www.google.com/s2/favicons?size=64&domain=https://github.com))oshiire-bot](https://github.com/n138-kz/oshiire-bot/)
+- [![](https://www.google.com/s2/favicons?size=64&domain=https://github.com)oshiire-bot](https://github.com/n138-kz/oshiire-bot/)
 
 ## License
 
