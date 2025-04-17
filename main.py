@@ -300,7 +300,7 @@ async def on_message(message):
             try:
                 await client.get_channel(message.channel.id).typing()
             except Exception as e:
-                logging.error('Error has occured: {}'.format(e.reason))
+                logging.error('Error has occured: {}'.format(e))
             embed = discord.Embed(
                 title=title,description=descr,color=color,
                 url=GLOBAL_TEXT['url']['github']['repository'],
@@ -328,7 +328,7 @@ async def on_message(message):
             try:
                 await client.get_channel(message.channel.id).typing()
             except Exception as e:
-                logging.error('Error has occured: {}'.format(e.reason))
+                logging.error('Error has occured: {}'.format(e))
             embed = discord.Embed(
                 title=title,description=descr,color=color,
                 url=GLOBAL_TEXT['url']['github']['repository'],
@@ -356,7 +356,7 @@ async def on_message(message):
             try:
                 await client.get_channel(message.channel.id).typing()
             except Exception as e:
-                logging.error('Error has occured: {}'.format(e.reason))
+                logging.error('Error has occured: {}'.format(e))
             embed = discord.Embed(
                 title=title,description=descr,color=color,
                 url=GLOBAL_TEXT['url']['github']['repository'],
