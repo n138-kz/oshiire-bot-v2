@@ -77,6 +77,10 @@ GET https://api.github.com/repos/n138-kz/oshiire-bot-v2
 
 ## setup
 
+### Invite link
+
+https://discord.com/oauth2/authorize?client_id=1362341100798345248
+
 ### .env
 
 | 設定項目 | 型 | 必須 | デフォルト値 | 備考 |
