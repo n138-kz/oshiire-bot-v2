@@ -374,6 +374,34 @@ async def on_message(message):
             with open(file=os.getcwd()+'/'+GLOBAL_FILE['async_log'].replace('%(time)', str(math.trunc(time.time()))),encoding='utf-8',mode='w') as f:
                 f.write('{0}'.format(async_log))
 
+        elif message.content.startswith(COMMAND_PREFIX+' join'):
+            logger.info('do_action: {0}'.format(message.content))
+            logger.info('do_author: {0}'.format(message.author.name))
+            title='Result'
+            descr=''
+            color=GLOBAL_TEXT['color']['err']
+
+            try:
+                await client.get_channel(message.channel.id).typing()
+            except Exception as e:
+                logging.error('Error has occured: {}'.format(e))
+            embed = discord.Embed(
+                title=title,description=descr,color=color,
+                url=GLOBAL_TEXT['url']['github']['repository'],
+                timestamp=datetime.datetime.now(datetime.timezone.utc),
+            )
+            embed.set_thumbnail(url=GLOBAL_TEXT['url']['discord']['avatar'])
+            embed.add_field(
+                name='Error',
+                value='Not implement',
+                inline=False
+            )
+            embed.set_footer(icon_url=config['internal']['discord']['footer']['icon'],text=config['internal']['discord']['footer']['text'])
+            embed.set_author(icon_url=config['internal']['discord']['author']['icon'],name=config['internal']['discord']['author']['name'],url=config['internal']['discord']['author']['url'])
+            async_log = await message.reply(embed=embed)
+            with open(file=os.getcwd()+'/'+GLOBAL_FILE['async_log'].replace('%(time)', str(math.trunc(time.time()))),encoding='utf-8',mode='w') as f:
+                f.write('{0}'.format(async_log))
+
 @tree.command(name="help",description=GLOBAL_TEXT['msg'][LOCALE]['display_help'])
 async def help(interaction: discord.Interaction):
     await interaction.response.send_message(getEnv(mode='help'), ephemeral=True)#ephemeral=True→「これらはあなただけに表示されています」
