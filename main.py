@@ -314,7 +314,9 @@ async def on_message(message):
             )
             embed.set_footer(icon_url=config['internal']['discord']['footer']['icon'],text=config['internal']['discord']['footer']['text'])
             embed.set_author(icon_url=config['internal']['discord']['author']['icon'],name=config['internal']['discord']['author']['name'],url=config['internal']['discord']['author']['url'])
-            await message.reply(embed=embed)
+            async_log = await message.reply(embed=embed)
+            with open(file=os.getcwd()+'/'+GLOBAL_FILE['async_log'].replace('%(time)', str(math.trunc(time.time()))),encoding='utf-8',mode='w') as f:
+                f.write('{0}'.format(async_log))
 
         elif message.content.startswith(COMMAND_PREFIX+' version'):
             logger.info('do_action: {0}'.format(message.content))
@@ -340,7 +342,9 @@ async def on_message(message):
             )
             embed.set_footer(icon_url=config['internal']['discord']['footer']['icon'],text=config['internal']['discord']['footer']['text'])
             embed.set_author(icon_url=config['internal']['discord']['author']['icon'],name=config['internal']['discord']['author']['name'],url=config['internal']['discord']['author']['url'])
-            await message.reply(embed=embed,)
+            async_log = await message.reply(embed=embed,avatar_url=config['internal']['discord']['author']['icon'])
+            with open(file=os.getcwd()+'/'+GLOBAL_FILE['async_log'].replace('%(time)', str(math.trunc(time.time()))),encoding='utf-8',mode='w') as f:
+                f.write('{0}'.format(async_log))
 
         elif message.content.startswith(COMMAND_PREFIX+' ping'):
             logger.info('do_action: {0}'.format(message.content))
@@ -366,7 +370,9 @@ async def on_message(message):
             )
             embed.set_footer(icon_url=config['internal']['discord']['footer']['icon'],text=config['internal']['discord']['footer']['text'])
             embed.set_author(icon_url=config['internal']['discord']['author']['icon'],name=config['internal']['discord']['author']['name'],url=config['internal']['discord']['author']['url'])
-            await message.reply(embed=embed)
+            async_log = await message.reply(embed=embed,avatar_url=config['internal']['discord']['author']['icon'])
+            with open(file=os.getcwd()+'/'+GLOBAL_FILE['async_log'].replace('%(time)', str(math.trunc(time.time()))),encoding='utf-8',mode='w') as f:
+                f.write('{0}'.format(async_log))
 
 @tree.command(name="help",description=GLOBAL_TEXT['msg'][LOCALE]['display_help'])
 async def help(interaction: discord.Interaction):
