@@ -342,7 +342,7 @@ async def on_message(message):
             )
             embed.set_footer(icon_url=config['internal']['discord']['footer']['icon'],text=config['internal']['discord']['footer']['text'])
             embed.set_author(icon_url=config['internal']['discord']['author']['icon'],name=config['internal']['discord']['author']['name'],url=config['internal']['discord']['author']['url'])
-            async_log = await message.reply(embed=embed,avatar_url=config['internal']['discord']['author']['icon'])
+            async_log = await message.reply(embed=embed)
             with open(file=os.getcwd()+'/'+GLOBAL_FILE['async_log'].replace('%(time)', str(math.trunc(time.time()))),encoding='utf-8',mode='w') as f:
                 f.write('{0}'.format(async_log))
 
@@ -370,7 +370,7 @@ async def on_message(message):
             )
             embed.set_footer(icon_url=config['internal']['discord']['footer']['icon'],text=config['internal']['discord']['footer']['text'])
             embed.set_author(icon_url=config['internal']['discord']['author']['icon'],name=config['internal']['discord']['author']['name'],url=config['internal']['discord']['author']['url'])
-            async_log = await message.reply(embed=embed,avatar_url=config['internal']['discord']['author']['icon'])
+            async_log = await message.reply(embed=embed)
             with open(file=os.getcwd()+'/'+GLOBAL_FILE['async_log'].replace('%(time)', str(math.trunc(time.time()))),encoding='utf-8',mode='w') as f:
                 f.write('{0}'.format(async_log))
 
