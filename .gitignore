@@ -2,6 +2,7 @@
 Backup/
 backup/
 *.bak*
+log/
 
 # Temporary files
 *.tmp
