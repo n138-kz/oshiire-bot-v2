@@ -1,0 +1,25 @@
+{
+    "prefix": "!oshiire",
+    "command": {
+        "help": {
+            "description": "コマンドヘルプを表示します。",
+            "admin":false
+        },
+        "ping": {
+            "description": "Botのレイテンシを測定します。",
+            "admin":false
+        },
+        "version": {
+            "description": "Botのバージョンを表示します。",
+            "admin":false
+        },
+        "join": {
+            "description": "",
+            "admin":false
+        },
+        "left": {
+            "description": "",
+            "admin":false
+        }
+    }
+}
