@@ -29,7 +29,7 @@ config = {
             "class": "logging.FileHandler",
             "level": "INFO",
             "formatter": "simple",
-            "filename": "to be replaced"
+            "filename": "log/logging.log"
         }
     },
     "loggers": {
