@@ -298,7 +298,7 @@ async def on_message(message):
             color=GLOBAL_TEXT['color']['ok']
 
             try:
-                await message.channel.id.typing()
+                await client.get_channel(message.channel.id).typing()
             except Exception as e:
                 logging.error('Error has occured: {}'.format(e.reason))
             embed = discord.Embed(
@@ -326,7 +326,7 @@ async def on_message(message):
             color=GLOBAL_TEXT['color']['ok']
 
             try:
-                await message.channel.id.typing()
+                await client.get_channel(message.channel.id).typing()
             except Exception as e:
                 logging.error('Error has occured: {}'.format(e.reason))
             embed = discord.Embed(
@@ -354,7 +354,7 @@ async def on_message(message):
             color=GLOBAL_TEXT['color']['ok']
 
             try:
-                await message.channel.id.typing()
+                await client.get_channel(message.channel.id).typing()
             except Exception as e:
                 logging.error('Error has occured: {}'.format(e.reason))
             embed = discord.Embed(
