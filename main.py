@@ -296,6 +296,11 @@ async def on_message(message):
             title='Result'
             descr=''
             color=GLOBAL_TEXT['color']['ok']
+
+            try:
+                await message.channel.id.typing()
+            except Exception as e:
+                logging.error('Error has occured: {}'.format(e.reason))
             embed = discord.Embed(
                 title=title,description=descr,color=color,
                 url=GLOBAL_TEXT['url']['github']['repository'],
@@ -317,6 +322,11 @@ async def on_message(message):
             title='Result'
             descr=''
             color=GLOBAL_TEXT['color']['ok']
+
+            try:
+                await message.channel.id.typing()
+            except Exception as e:
+                logging.error('Error has occured: {}'.format(e.reason))
             embed = discord.Embed(
                 title=title,description=descr,color=color,
                 url=GLOBAL_TEXT['url']['github']['repository'],
@@ -338,6 +348,11 @@ async def on_message(message):
             title='Result'
             descr=''
             color=GLOBAL_TEXT['color']['ok']
+
+            try:
+                await message.channel.id.typing()
+            except Exception as e:
+                logging.error('Error has occured: {}'.format(e.reason))
             embed = discord.Embed(
                 title=title,description=descr,color=color,
                 url=GLOBAL_TEXT['url']['github']['repository'],
