@@ -81,11 +81,38 @@ GET https://api.github.com/repos/n138-kz/oshiire-bot-v2
 
 https://discord.com/oauth2/authorize?client_id=1362341100798345248
 
-### .env
+### config.json
 
-| 設定項目 | 型 | 必須 | デフォルト値 | 備考 |
-|:-|:-|:-|:-|:-|
-| discord_webhook_url | str | True | `https://discord.com/api/webhooks/` | |
-| discord_avatar_url  | str |      | `https://upload-os-bbs.hoyolab.com/upload/2022/11/24/21d71c44827fa664a6a21977d9a3dd1c_6799685155050732642.png` | ![](https://upload-os-bbs.hoyolab.com/upload/2022/11/24/21d71c44827fa664a6a21977d9a3dd1c_6799685155050732642.png) |
-| discord_avatar_name | str |      | `知恵の殿堂` | |
-| discord_embed_color | str |      | `95af71` | `#95AF71`(`rgb(149,175,113)`) |
+```json
+{
+    "external": {
+        "discord": {
+            "token": "{Discord Bot Token is here}"
+        }
+    },
+    "internal": {
+        "discord": {
+            "author": {
+                "url": "https://discord.com/",
+                "name": "Discord Bot",
+                "icon": "https://cdn.discordapp.com/embed/avatars/0.png"
+            },
+            "color": "ffffff",
+            "title": "Hello World",
+            "description": "",
+            "image": {
+                "image": {
+                    "url": ""
+                },
+                "thumbnail": {
+                    "url": ""
+                }
+            },
+            "footer": {
+                "text": "Powered by n138-kz",
+                "icon": "https://github.com/n138-kz.png"
+            }
+        }
+    }
+}
+```
