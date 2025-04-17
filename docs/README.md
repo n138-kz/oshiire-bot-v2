@@ -74,3 +74,14 @@ GET https://api.github.com/repos/n138-kz/oshiire-bot-v2
 - Warranty / 無保証
 
 </details>
+
+## setup
+
+### .env
+
+|設定項目|型|デフォルト値|備考|
+|:-|:-|:-|:-|
+|discord_webhook_url|str|`https://discord.com/api/webhooks/`||
+|discord_avatar_url|str|`https://upload-os-bbs.hoyolab.com/upload/2022/11/24/21d71c44827fa664a6a21977d9a3dd1c_6799685155050732642.png`||
+|discord_avatar_name|str|`知恵の殿堂`||
+|discord_embed_color|str|`95af71`||
